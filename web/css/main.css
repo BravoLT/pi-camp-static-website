@@ -1,0 +1,86 @@
+
+body {
+  background-color: #f6f2f7;
+  font-family: sans-serif;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  padding: 24px;
+  position: fixed;
+  background-color: #bf5ced;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.header a {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.header a:hover {
+  color: #5cedbf;
+}
+
+.content {
+  margin: 96px 0 112px;
+}
+
+.content .content-block {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.content .content-block:not(:last-child) {
+  border-bottom: 1px solid #26334f;
+}
+
+.content .content-block p {
+  font-size: 18px;
+  line-height: 2;
+  padding: 0 32px;
+}
+
+.raspberry-pi-5-img {
+  width: 500px;
+}
+
+.footer {
+  background-color: #26334f;
+  bottom: 0;
+  left: 0;
+  padding: 24px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 16px 0;
+  }
+
+  .header a {
+    font-size: 28px;
+  }
+
+  .content .content-block {
+    flex-direction: column;
+  }
+
+  .content .content-block p {
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+  .raspberry-pi-5-img {
+    width: 200px;
+  }
+}
