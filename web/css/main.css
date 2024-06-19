@@ -23,7 +23,20 @@ body {
   padding: 8px;
 }
 
-.header a:hover {
+#update-view-button {
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+  top: 20px;
+  border: none;
+  box-shadow: 4px 2px 2px #5cedbf;
+  border-radius: 16px;
+  font-weight: bold;
+  padding: 16px;
+  width: 120px;
+}
+
+#camper-survey-submit-button:hover, #update-view-button:hover, .header a:hover {
   color: #5cedbf;
 }
 
@@ -34,7 +47,14 @@ body {
 .content .content-block {
   align-items: center;
   display: flex;
+}
+
+.content .content-block.dir-left {
   flex-direction: row-reverse;
+}
+
+.content .content-block.dir-right {
+  flex-direction: row;
 }
 
 .content .content-block:not(:last-child) {
@@ -49,6 +69,45 @@ body {
 
 .raspberry-pi-5-img {
   width: 500px;
+}
+
+#camper-survey {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(55, 73, 113, 0.5);
+  border-radius: 16px;
+  color: white;
+  padding: 16px;
+  margin: 16px;
+  width: 100%;
+}
+
+#camper-survey div {
+  margin: 16px 0;
+}
+
+#camper-survey .color-container {
+  width: 100%;
+}
+
+#camper-survey .multi-fields {
+  display: flex;
+  justify-content: space-around;
+}
+
+#camper-survey .multi-fields fieldset {
+  width: 200px;
+}
+
+#camper-survey-submit-button {
+  cursor: pointer;
+  border: none;
+  box-shadow: 4px 2px 2px #5cedbf;
+  border-radius: 16px;
+  font-weight: bold;
+  padding: 16px;
+  width: 120px;
 }
 
 .footer {

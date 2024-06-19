@@ -1,18 +1,20 @@
 <!DOCTYPE>
 <html lang="en">
 <head>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <link rel="stylesheet" href="css/main.css">
   <title>Pi Camp Website</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link rel="icon" type="image/x-icon" href="assets/raspberry-pi-favicon.png">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div class="header">
   <a href="https://github.com/BravoLT/pi-camp-static-website" target="_blank">
     Pi Camp Static Website
   </a>
+  <button id="update-view-button">Update View</button>
 </div>
 <div class="content">
-  <div class="content-block">
+  <div class="content-block dir-left">
     <div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit eros quis posuere
@@ -43,7 +45,95 @@
         Quisque ullamcorper metus vel auctor mollis.
       </p>
     </div>
-    <img class="raspberry-pi-5-img" alt="Raspberry Pi 5" src="assets/raspberry-pi-5.webp"/>
+    <a href="https://www.raspberrypi.com/" target="_blank">
+      <img class="raspberry-pi-5-img" alt="Raspberry Pi 5" src="assets/raspberry-pi-5.webp"/>
+    </a>
+  </div>
+  <div class="content-block dir-right">
+    <div>
+      <p>
+        Praesent efficitur vulputate feugiat. Mauris porttitor quam vel metus congue aliquet.
+        Integer
+        tempor elit non euismod semper. Sed vel ex at eros ullamcorper ornare. Curabitur dignissim
+        aliquet felis, quis malesuada justo viverra sed. Maecenas ultrices odio sed ultrices
+        maximus.
+        Etiam semper arcu quis eros mattis scelerisque.
+      </p>
+      <p>
+        Cras eleifend ligula libero, non pharetra augue ultricies sed. Nulla facilisi. Pellentesque
+        vel
+        convallis velit. Pellentesque vel porta odio. Maecenas commodo vestibulum tellus, non
+        accumsan
+        nunc eleifend sed. Mauris hendrerit in augue a consectetur. Aliquam eu iaculis turpis,
+        suscipit
+        suscipit arcu. Nulla molestie magna at quam pharetra finibus. Aliquam volutpat posuere nisi,
+        at
+        mollis arcu. Aliquam eu pulvinar erat, id interdum erat. Sed sit amet aliquet ligula,
+        venenatis
+        congue turpis.
+      </p>
+      <p>
+        Pellentesque dignissim velit non eros condimentum imperdiet. Phasellus lacus metus,
+        imperdiet
+        in ipsum vitae, tempus finibus justo. Cras purus massa, sodales quis erat non, pellentesque
+        eleifend sapien. Aliquam suscipit viverra blandit. Duis quis lorem pharetra, pulvinar arcu
+        vitae, pulvinar nulla. Cras finibus dui enim, vitae vulputate dolor eleifend quis. Curabitur
+        non elit eu lacus egestas scelerisque. Fusce dolor dui, dignissim sit amet massa quis,
+        laoreet
+        efficitur elit. Duis vestibulum libero eget dignissim sagittis. Nunc luctus felis orci, non
+        rutrum augue volutpat a. Donec pretium a urna at semper. Praesent ullamcorper, neque ut
+        finibus volutpat, est dui feugiat arcu, eget placerat urna risus vitae purus. Praesent
+        facilisis et enim in lobortis.
+      </p>
+    </div>
+    <form id="camper-survey">
+      <h2>Camper Survey</h2>
+      <div class="color-container">
+        <label for="fav-color">Favorite Color</label>
+        <input id="fav-color" name="fav-color" type="color"/>
+      </div>
+      <div class="multi-fields">
+        <fieldset>
+          <legend>Favorite Super Hero</legend>
+          <div>
+            <label for="fav-supe1">Superman</label>
+            <input id="fav-supe1" name="fav-supe" type="radio" value="superman">
+          </div>
+          <div>
+            <label for="fav-supe2">Batman</label>
+            <input id="fav-supe2" name="fav-supe" type="radio" value="batman">
+          </div>
+          <div>
+            <label for="fav-supe3">Spider-Man</label>
+            <input id="fav-supe3" name="fav-supe" type="radio" value="spidey">
+          </div>
+          <div>
+            <label for="fav-supe4">Dazzler</label>
+            <input id="fav-supe4" name="fav-supe" type="radio" value="dazzler">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Favorite Sports</legend>
+          <div>
+            <label for="fav-sport1">Basketball</label>
+            <input id="fav-sport1" name="fav-sport" type="checkbox" value="basketball">
+          </div>
+          <div>
+            <label for="fav-sport2">Soccer</label>
+            <input id="fav-sport2" name="fav-sport" type="checkbox" value="soccer">
+          </div>
+          <div>
+            <label for="fav-sport3">Football</label>
+            <input id="fav-sport3" name="fav-sport" type="checkbox" value="football">
+          </div>
+          <div>
+            <label for="fav-sport4">Golf</label>
+            <input id="fav-sport4" name="fav-sport" type="checkbox" value="golf">
+          </div>
+        </fieldset>
+      </div>
+      <button id="camper-survey-submit-button">Promise?</button>
+    </form>
   </div>
   <div class="content-block">
     <p>
@@ -55,27 +145,22 @@
       nibh.
       Quisque ullamcorper metus vel auctor mollis.
     </p>
-  </div>
-  <div class="content-block">
     <p>
-      Praesent efficitur vulputate feugiat. Mauris porttitor quam vel metus congue aliquet. Integer
-      tempor elit non euismod semper. Sed vel ex at eros ullamcorper ornare. Curabitur dignissim
-      aliquet felis, quis malesuada justo viverra sed. Maecenas ultrices odio sed ultrices maximus.
-      Etiam semper arcu quis eros mattis scelerisque.
+      Donec leo nisl, fermentum at urna id, porttitor ultricies neque. Sed in neque fringilla,
+      tempus lectus ac, mollis neque. Sed augue odio, porttitor in arcu eu, bibendum dapibus nibh.
+      Nulla vel justo ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada
+      fames ac turpis egestas. Maecenas egestas arcu quis mi ornare, eget tempor lectus commodo. Nam
+      sodales lobortis ex sed dapibus. Cras sagittis nisl at neque vulputate pharetra. Fusce in
+      aliquam quam. Donec nec ultricies odio. Suspendisse porta, arcu vel luctus lacinia, tellus
+      quam interdum est, quis ultrices magna tellus ac tellus. Donec enim urna, tincidunt non
+      condimentum et, vehicula auctor neque. Praesent ut purus nulla.
     </p>
-  </div>
-  <div class="content-block">
     <p>
-      Cras eleifend ligula libero, non pharetra augue ultricies sed. Nulla facilisi. Pellentesque
-      vel
-      convallis velit. Pellentesque vel porta odio. Maecenas commodo vestibulum tellus, non accumsan
-      nunc eleifend sed. Mauris hendrerit in augue a consectetur. Aliquam eu iaculis turpis,
-      suscipit
-      suscipit arcu. Nulla molestie magna at quam pharetra finibus. Aliquam volutpat posuere nisi,
-      at
-      mollis arcu. Aliquam eu pulvinar erat, id interdum erat. Sed sit amet aliquet ligula,
-      venenatis
-      congue turpis.
+      Ut nec augue luctus, commodo lectus ac, vulputate metus. Nunc hendrerit magna sed lacinia
+      egestas. Nam tincidunt leo nisl, nec maximus nunc porta id. Integer erat dui, rhoncus a
+      hendrerit quis, vulputate nec urna. Donec vehicula eros tortor, et tempor neque ullamcorper
+      id. Donec pulvinar rutrum convallis. Etiam euismod tempus diam non bibendum. Quisque viverra
+      luctus fermentum.
     </p>
   </div>
 </div>
@@ -85,4 +170,5 @@
   </a>
 </div>
 </body>
+<script src="js/main.js" type="module"></script>
 </html>
