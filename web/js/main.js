@@ -29,6 +29,14 @@ function updateViewButtonClick() {
   }
 }
 
+function updateBackgroundColor(color) {
+  const headerElement = document.getElementById('header');
+  headerElement.style.backgroundColor = color;
+
+  const footerElement = document.getElementById('footer');
+  footerElement.style.backgroundColor = color;
+}
+
 ready(function () {
   const updateViewButton = document.getElementById('update-view-button');
   if (updateViewButton) {
@@ -45,26 +53,33 @@ ready(function () {
 
       const data = new FormData(camperSurveyForm);
 
+      // create pop-up message
       let output = "✨  Thank you for taking our survey!  ✨\n\n";
+      let sports = [];
       for (const [key, val] of data) {
 
         let label;
         switch (key) {
           case 'fav-color':
             label = '🌈  Favorite Color';
+            updateBackgroundColor(val);
             break;
           case 'fav-supe':
             label = '🚀  Favorite Super Hero';
             break;
           case 'fav-sport':
-            label = '⚾️  Favorite Sport(s)';
-            break;
+            sports.push(val);
+            continue;
           default:
             label = key;
         }
         output += `    ${label} = ${val}\n`
       }
-      output += "\nThose are my favorite too.  😁\n"
+      if (sports.length > 0) {
+        output += `    ⚾️  Favorite Sport(s) = ${sports}\n`
+      }
+
+      output += "\nThose are my favorite too.  😁"
       alert(output);
     });
   }

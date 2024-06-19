@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="header">
+<div id="header">
   <a href="https://github.com/BravoLT/pi-camp-static-website" target="_blank">
     Pi Camp Static Website
   </a>
@@ -17,7 +17,8 @@
   <div class="content-block dir-left">
     <div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit eros quis posuere
+        <a href="https://loremipsum.io/" target="_blank">Lorem ipsum</a> dolor sit amet, consectetur
+        adipiscing elit. Morbi hendrerit eros quis posuere
         interdum. Suspendisse potenti. Curabitur tincidunt, neque et tempus tincidunt, ex sem
         posuere
         lectus, ac fermentum velit purus sit amet turpis. Maecenas suscipit laoreet lacus, nec
@@ -87,48 +88,52 @@
       </p>
     </div>
     <form id="camper-survey">
-      <h2>Camper Survey</h2>
+      <span class="title">Camper Survey</span>
       <div class="color-container">
         <label for="fav-color">Favorite Color</label>
-        <input id="fav-color" name="fav-color" type="color"/>
+        <input id="fav-color" name="fav-color" type="color" value="#26334f"/>
       </div>
       <div class="multi-fields">
         <fieldset>
           <legend>Favorite Super Hero</legend>
           <div>
-            <label for="fav-supe1">Superman</label>
             <input id="fav-supe1" name="fav-supe" type="radio" value="superman">
+            <label for="fav-supe1">Superman</label>
           </div>
           <div>
-            <label for="fav-supe2">Batman</label>
             <input id="fav-supe2" name="fav-supe" type="radio" value="batman">
+            <label for="fav-supe2">Batman</label>
           </div>
           <div>
-            <label for="fav-supe3">Spider-Man</label>
             <input id="fav-supe3" name="fav-supe" type="radio" value="spidey">
+            <label for="fav-supe3">Spider-Man</label>
           </div>
           <div>
-            <label for="fav-supe4">Dazzler</label>
             <input id="fav-supe4" name="fav-supe" type="radio" value="dazzler">
+            <label for="fav-supe4">Dazzler</label>
           </div>
         </fieldset>
         <fieldset>
-          <legend>Favorite Sports</legend>
+          <legend>Favorite Sport(s)</legend>
           <div>
-            <label for="fav-sport1">Basketball</label>
             <input id="fav-sport1" name="fav-sport" type="checkbox" value="basketball">
+            <label for="fav-sport1">Basketball</label>
           </div>
           <div>
-            <label for="fav-sport2">Soccer</label>
             <input id="fav-sport2" name="fav-sport" type="checkbox" value="soccer">
+            <label for="fav-sport2">Soccer</label>
           </div>
           <div>
-            <label for="fav-sport3">Football</label>
             <input id="fav-sport3" name="fav-sport" type="checkbox" value="football">
+            <label for="fav-sport3">Football</label>
           </div>
           <div>
-            <label for="fav-sport4">Golf</label>
             <input id="fav-sport4" name="fav-sport" type="checkbox" value="golf">
+            <label for="fav-sport4">Golf</label>
+          </div>
+          <div>
+            <input id="fav-sport5" name="fav-sport" type="checkbox" value="baseball">
+            <label for="fav-sport5">Baseball</label>
           </div>
         </fieldset>
       </div>
@@ -164,7 +169,7 @@
     </p>
   </div>
 </div>
-<div class="footer">
+<div id="footer">
   <a href="https://www.bravolt.com/" target="_blank">
     <img alt="bravo-lt-logo" src="assets/bravo-lt-logo.webp"/>
   </a>

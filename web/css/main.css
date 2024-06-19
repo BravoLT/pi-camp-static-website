@@ -4,18 +4,22 @@ body {
   font-family: sans-serif;
 }
 
-.header {
+input {
+  cursor: pointer;
+}
+
+#header {
   top: 0;
   left: 0;
   padding: 24px;
   position: fixed;
-  background-color: #bf5ced;
+  background-color: #26334f;
   width: 100%;
   text-align: center;
   z-index: 1;
 }
 
-.header a {
+#header a {
   color: white;
   font-size: 36px;
   font-weight: bold;
@@ -24,6 +28,7 @@ body {
 }
 
 #update-view-button {
+  background-color: #f6f2f7;
   cursor: pointer;
   position: absolute;
   right: 10%;
@@ -36,7 +41,7 @@ body {
   width: 120px;
 }
 
-#camper-survey-submit-button:hover, #update-view-button:hover, .header a:hover {
+#camper-survey-submit-button:hover, #update-view-button:hover, #header a:hover, .content .content-block p a:hover {
   color: #5cedbf;
 }
 
@@ -67,8 +72,19 @@ body {
   padding: 0 32px;
 }
 
+.content .content-block p a {
+  color: #26334f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 .raspberry-pi-5-img {
   width: 500px;
+}
+
+.raspberry-pi-5-img:hover {
+  background-color: rgba(55, 73, 113, 0.5);
+  border-radius: 16px;
 }
 
 #camper-survey {
@@ -81,6 +97,14 @@ body {
   padding: 16px;
   margin: 16px;
   width: 100%;
+}
+
+#camper-survey .title {
+  font-size: 26px;
+  font-weight: bolder;
+  text-decoration: underline;
+  margin: 8px;
+  line-height: 2;
 }
 
 #camper-survey div {
@@ -110,28 +134,28 @@ body {
   width: 120px;
 }
 
-.footer {
+#footer {
   background-color: #26334f;
   bottom: 0;
   left: 0;
   padding: 24px;
   position: fixed;
-  text-align: center;
+  text-align: left;
   width: 100%;
   z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
-  .header {
+  #header {
     padding: 16px 0;
   }
 
-  .header a {
-    font-size: 28px;
+  #header a {
+    font-size: 26px;
   }
 
-  .content .content-block {
-    flex-direction: column;
+  #update-view-button {
+    display: none;
   }
 
   .content .content-block p {
@@ -139,7 +163,28 @@ body {
     padding: 0 16px;
   }
 
+  .content .content-block {
+    flex-direction: column-reverse !important;
+  }
+
   .raspberry-pi-5-img {
     width: 200px;
+  }
+
+  #camper-survey {
+    border-radius: 0;
+  }
+
+  #camper-survey .color-container {
+    width: unset;
+  }
+
+  #camper-survey .multi-fields {
+    flex-direction: column !important;
+    gap: 16px;
+  }
+
+  #footer {
+    text-align: center;
   }
 }
