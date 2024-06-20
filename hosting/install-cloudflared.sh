@@ -6,8 +6,4 @@ sudo apt update
 
 sudo apt upgrade -y
 
-sudo apt install git -y
-
-sudo apt install nginx -y
-
-systemctl status nginx
+sudo apt install cloudflared
