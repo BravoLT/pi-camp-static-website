@@ -54,14 +54,6 @@ input {
   display: flex;
 }
 
-.content .content-block.dir-left {
-  flex-direction: row-reverse;
-}
-
-.content .content-block.dir-right {
-  flex-direction: row;
-}
-
 .content .content-block:not(:last-child) {
   border-bottom: 1px solid #26334f;
 }
@@ -76,6 +68,14 @@ input {
   color: #26334f;
   font-weight: 600;
   text-decoration: none;
+}
+
+.dir-left {
+  flex-direction: row-reverse;
+}
+
+.dir-right {
+  flex-direction: row;
 }
 
 .raspberry-pi-5-img {
@@ -138,11 +138,27 @@ input {
   background-color: #26334f;
   bottom: 0;
   left: 0;
-  padding: 24px;
+  padding: 16px 0;
   position: fixed;
   text-align: left;
   width: 100%;
   z-index: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+#footer a {
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 4px;
+}
+
+#footer a:hover {
+  border: 1px solid #5cedbf;
+}
+
+#footer a img {
+  border-radius: 16px;
 }
 
 @media screen and (max-width: 768px) {
@@ -156,6 +172,10 @@ input {
 
   #update-view-button {
     display: none;
+  }
+
+  .content {
+    margin: 96px 0 0;
   }
 
   .content .content-block p {
@@ -185,6 +205,6 @@ input {
   }
 
   #footer {
-    text-align: center;
+    display: none;
   }
 }
