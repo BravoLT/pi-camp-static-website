@@ -11,7 +11,7 @@ ARCH=$(uname -m)
 echo "architecture: ${ARCH}"
 
 # install 32-bit package
-if [ ${ARCH} -eq 'armv7l' ]; then
+if [ ${ARCH} == 'armv7l' ]; then
 
   sudo dpkg --add-architecture arm
 
