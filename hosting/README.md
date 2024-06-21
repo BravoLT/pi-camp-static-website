@@ -1,13 +1,6 @@
 
 ## Hosting
 
-### Prerequisites
-
-```
-# grant execute permission to all shell scripts in the current directory
-chmod +x *.sh
-```
-
 ### Install NGINX
 
 ```
