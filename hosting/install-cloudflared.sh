@@ -6,14 +6,14 @@ sudo apt update
 
 sudo apt upgrade -y
 
-sudo dpkg --add-architecture arm
-
 ARCH=$(uname -m)
 
 echo "architecture: ${ARCH}"
 
 # install 32-bit package
 if [ ${ARCH} -eq 'armv7l' ]; then
+
+  sudo dpkg --add-architecture arm
 
   wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm.deb
 
@@ -23,6 +23,8 @@ if [ ${ARCH} -eq 'armv7l' ]; then
 
 # install 64-bit package
 elif [[ "$ARCH" == 'aarch64' ]]; then
+
+  sudo dpkg --add-architecture arm64
 
   wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64.deb
 
@@ -36,3 +38,5 @@ else
 
   echo "install manually: https://github.com/cloudflare/cloudflared/releases"
 fi
+
+sudo apt autoremove -y
