@@ -6,4 +6,10 @@ sudo apt update
 
 sudo apt upgrade -y
 
-sudo apt install cloudflared
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm.deb
+
+sudo apt install ./cloudflared-linux-arm.deb
+
+sudo rm cloudflared-linux-arm.deb
+
+sudo cloudflared tunnel --url http://localhost:8080
