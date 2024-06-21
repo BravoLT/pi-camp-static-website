@@ -2,7 +2,9 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-sudo rm /var/www/html/index.nginx-debian.html
+[ -e /var/www/html/index.nginx-debian.html ] && sudo rm /var/www/html/index.nginx-debian.html
+
+sudo rm -r /var/www/html/*
 
 sudo cp -r ../web/* /var/www/html/
 
